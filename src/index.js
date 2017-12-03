@@ -38,8 +38,6 @@ export default (() => {
     /**
      * Get the currently selected language
      * Or the default language when no language has been set yet
-     * @param {String} language
-     * @param {Boolean} isCurrentLanguage
      * @return {String} current or default language
      */
     getLanguage(): ?string {
@@ -47,7 +45,7 @@ export default (() => {
     },
     /**
      * Get all available languages
-     * @return {Array} array of language strings
+     * @return {Array} array of language codes (string)
      */
     getAvailableLanguages(): ?Array<string> {
       return R.keys(localisedStrings);

@@ -82,7 +82,15 @@ render () {
 
 ## Available methods
 
-
+| Method                          | Description                                                                                   | Parameters                                  | Returns                                         |
+|---------------------------------|-----------------------------------------------------------------------------------------------|---------------------------------------------|-------------------------------------------------|
+| setStringsForLanguage           | Set the strings from the strings object for a given language                                  | language: string strings: object            |                                                 |
+| setStringsForLanguages          | Loops over object of language strings objects and set them as string for the given language   | languages: Object                           |                                                 |
+| setDefaultLanguage              | Set the default language to be used when no language has been set yet                         | language: string isCurrentLanguage: boolean |                                                 |
+| getLanguage                     | Get the currently selected language Or the default language when no language has been set yet |                                             | string: current or default language             |
+| getAvailableLanguages           | Get all available languages                                                                   |                                             | array<string>: array of language codes (string) |
+| getAllStringsForCurrentLanguage | Get all available strings (with translation) for current language                             |                                             | object: all available strings                   |
+| translate                       | Get a translation for given key Returns key when no translation could be found                | key: string                                 | string: translation or key                      |
 
 ## License
 
