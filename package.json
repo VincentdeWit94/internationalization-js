@@ -1,6 +1,6 @@
 {
   "name": "internationalization-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight i18n for your javascript applications",
   "main": "./src/index.js",
   "scripts": {
