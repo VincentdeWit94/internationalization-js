@@ -22,7 +22,7 @@ export default (() => {
     setStringsForLanguages(languages: Object) {
       R.forEachObjIndexed((strings, languageKey) => {
         if (strings instanceof Object) {
-          this.addStringsForLanguage(languageKey, R.prop(languageKey, strings));
+          this.setStringsForLanguage(languageKey, R.prop(languageKey, strings));
         }
       }, languages);
     },
