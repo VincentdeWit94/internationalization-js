@@ -4,18 +4,17 @@
         "mocha": true
     },
     "parser": "babel-eslint",
+    "plugins": [
+      "flowtype"
+    ],
     "parserOptions": {
         "ecmaFeatures": {
           "experimentalObjectRestSpread": true
         }
     },
     "rules": {
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "arrow-parens": [0, "as-needed"],
-        "react/prefer-stateless-function": [0],
         "global-require": [0],
-        "indent": [2, 4, {"SwitchCase": 1}],
-        "react/jsx-indent": [2, 4, {"SwitchCase": 1}],
-        "react/jsx-indent-props": [2, 4, {"SwitchCase": 1}]
+        "indent": [2, 2, {"SwitchCase": 1}]
     }
   }
