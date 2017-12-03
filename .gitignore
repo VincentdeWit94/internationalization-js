@@ -3,3 +3,4 @@ node_modules
 .nvm
 .DS_Store
 .vscode
+yarn.lock
