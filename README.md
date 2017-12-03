@@ -55,8 +55,29 @@ import I from 'internationalization-js';
 import Translations from './localisation';
 
 ...
-L.initWithLanguages(Translations); // This function adds the translation strings into our plugin
+L.setStringsForLanguages(Translations); // This function adds the translation strings into our plugin
 L.setDefaultLanguage('nl', true); // You can use whatever language code styling you prefer, as long as you keep the key in the language file the same
+```
+
+Let's translate!
+
+```jsx
+import I from 'internationalization-js';
+const localizedWelcome = I.translate('welcome'); // returns => 'Welkom bij mijn coole React app'
+```
+
+Or for example in your react app
+```jsx
+import I from 'internationalization-js';
+
+...
+render () {
+    return (
+        <View>
+            <Text>{I.translate('welcome')}</Text>
+        </View>
+    );
+}
 ```
 
 ## Available methods
