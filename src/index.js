@@ -1,5 +1,5 @@
 // @flow
-import R from 'ramda';
+import * as R from 'ramda';
 
 export default (() => {
   const localisedStrings: Object = {};
@@ -11,13 +11,13 @@ export default (() => {
       localisedStrings[language] = strings;
     },
     initWithLanguages(languages: Object) {
-      R.forEachObjIndexed((languageKey, strings) => {
+      R.forEachObjIndexed((strings, languageKey) => {
         if (strings instanceof Object) {
-          localisedStrings[languageKey] = strings;
+          localisedStrings[languageKey] = R.prop(languageKey, strings);
         }
       }, languages);
     },
-    setDefaultLanguage(language: string, isCurrentLanguage: ?bool) {
+    setDefaultLanguage(language: string, isCurrentLanguage: ?boolean) {
       defaultLanguage = language;
       currentLanguage = isCurrentLanguage ? defaultLanguage : currentLanguage;
     },
@@ -27,8 +27,13 @@ export default (() => {
     getAvailableLanguages(): ?Array<string> {
       return R.keys(localisedStrings);
     },
+    getAllStringsForCurrentLanguage(): ?Object {
+      return R.prop(this.getLanguage(), localisedStrings);
+    },
     translate(key: string): ?string {
-      return R.prop(key, R.prop(this.getLanguage(), localisedStrings));
+      const translation: ?string = R.prop(key, this.getAllStringsForCurrentLanguage());
+      return translation !== undefined ? translation : key;
     },
   };
 })();
+
