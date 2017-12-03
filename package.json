@@ -1,7 +1,7 @@
 {
-  "name": "react-native-internationalization",
+  "name": "internationalization-js",
   "version": "1.0.0",
-  "description": "Lightweight i18n for your React Native applications Edit",
+  "description": "Lightweight i18n for your javascript applications",
   "main": "./src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,10 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VincentdeWit94/react-native-internationalization.git"
+    "url": "git+https://github.com/VincentdeWit94/internationalization-js.git"
   },
   "keywords": [
     "react-native",
+    "react",
+    "javascript",
     "i18n",
     "internationalization",
     "localization",
@@ -22,9 +24,9 @@
   "author": "Vincent de Wit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/VincentdeWit94/react-native-internationalization/issues"
+    "url": "https://github.com/VincentdeWit94/internationalization-js/issues"
   },
-  "homepage": "https://github.com/VincentdeWit94/react-native-internationalization#readme",
+  "homepage": "https://github.com/VincentdeWit94/internationalization-js#readme",
   "dependencies": {
     "babel-eslint": "^8.0.3",
     "eslint": "^4.12.1",
